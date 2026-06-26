@@ -6,7 +6,7 @@ path="${url#file://}"
 if [[ -d "$path" ]]; then
     open "$path"  # Finder
 elif [[ -f "$path" ]]; then
-    /usr/local/bin/zed "$path"
+    zed "$path"
 else
     open "$url"   # browser for http/https
 fi
