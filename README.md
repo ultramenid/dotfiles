@@ -29,15 +29,16 @@ Set up my terminal environment on this macOS machine using my dotfiles at https:
 4. Clone the dotfiles repo:
    - git clone https://github.com/ultramenid/dotfiles.git ~/Documents/Development/dotfiles
 
-5. Copy Kitty config:
+5. Set up Kitty config:
    - mkdir -p ~/.config/kitty
-   - cp ~/Documents/Development/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
-   - cp ~/Documents/Development/dotfiles/kitty/open_smart.sh ~/.config/kitty/open_smart.sh
+   - Append the contents of dotfiles/kitty/kitty.conf to ~/.config/kitty/kitty.conf (do not overwrite)
+   - Copy open_smart.sh: cp ~/Documents/Development/dotfiles/kitty/open_smart.sh ~/.config/kitty/open_smart.sh
    - chmod +x ~/.config/kitty/open_smart.sh
 
-6. Copy Zsh config:
-   - cp ~/Documents/Development/dotfiles/zsh/.zshrc ~/.zshrc
-   - cp ~/Documents/Development/dotfiles/zsh/.zprofile ~/.zprofile
+6. Set up Zsh config:
+   - Append the contents of dotfiles/zsh/.zshrc to ~/.zshrc (do not overwrite)
+   - Append the contents of dotfiles/zsh/.zprofile to ~/.zprofile (do not overwrite)
+   - Avoid duplicating lines that already exist in the existing config
 
 7. Install Kitty theme (Catppuccin Mocha):
    - kitten themes --reload-in=all Catppuccin-Mocha
