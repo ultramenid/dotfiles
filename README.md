@@ -34,6 +34,7 @@ Set up my terminal environment on this macOS machine using my dotfiles at https:
    - Append the contents of dotfiles/kitty/kitty.conf to ~/.config/kitty/kitty.conf (do not overwrite)
    - Copy open_smart.sh: cp ~/Documents/Development/dotfiles/kitty/open_smart.sh ~/.config/kitty/open_smart.sh
    - chmod +x ~/.config/kitty/open_smart.sh
+   - Note: open_smart.sh uses `open -a Zed` for files, `open` for folders (Finder), and `open` for URLs (browser)
 
 6. Set up Zsh config:
    - Append the contents of dotfiles/zsh/.zshrc to ~/.zshrc (do not overwrite)
@@ -66,7 +67,8 @@ After setup, restart Kitty.
 | `cmd+c` / `cmd+v` | Copy / paste |
 | `cmd+left` / `right` | Start / end of line |
 | `opt+left` / `right` | Word back / forward |
-| `cmd+click` | Open file in Zed, folder in Finder, URL in browser |
+| `cmd+click` on `file://` | Open file in Zed, folder in Finder |
+| `cmd+click` on `https://` | Open URL in browser |
 | `ctrl+g` | Hints — pick a file path and open in Zed |
 
 ### Window
