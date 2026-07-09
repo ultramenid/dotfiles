@@ -2,10 +2,13 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 plugins=(git)
 
-# Case-insensitive + partial (non-anchor) completion matching
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
 source $ZSH/oh-my-zsh.sh
+
+# Case-insensitive + partial (non-anchor) completion matching.
+# Must come after oh-my-zsh.sh: its lib/completion.zsh sets its own
+# matcher-list and would otherwise clobber this. Anchor-based matching
+# also breaks kitty's `ssh` kitten completion (kovidgoyal/kitty#7491).
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # Aliases
 alias o="open ."
