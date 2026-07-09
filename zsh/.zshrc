@@ -1,6 +1,10 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 plugins=(git)
+
+# Case-insensitive + partial (non-anchor) completion matching
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
